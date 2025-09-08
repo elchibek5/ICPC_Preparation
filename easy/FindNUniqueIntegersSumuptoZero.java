@@ -1,12 +1,14 @@
 class Solution {
     public int[] sumZero(int n) {
         int[] ans = new int[n];
-        int num = 1;
-        for (int i = 0; i < n / 2; i++) {
-            ans[i] = num;
-            ans[n - i - 1] = -num;
-            num++;
+        int index = 0;
+
+        for (int i = 1; i <= n / 2; i++) {
+            ans[index++] = -i;
+            ans[index++] = i;
         }
+
+        if (n % 2 != 0) ans[index] = 0;
         return ans;
     }
 }
