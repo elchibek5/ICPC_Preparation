@@ -19,6 +19,12 @@ class Solution {
                 j++;
             }
         }
-        return Arrays.copyOf(temp, k);
+
+        int[] result = new int[k];
+        for (int x = 0; x < k; x++) {
+            result[x] = temp[x];
+        }
+
+        return result;
     }
 }
