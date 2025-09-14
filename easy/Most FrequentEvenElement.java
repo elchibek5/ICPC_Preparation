@@ -1,6 +1,5 @@
 class Solution {
     public int mostFrequentEven(int[] nums) {
-        Arrays.sort(nums);
         Map <Integer, Integer> freq = new HashMap<>();
 
         for (int n : nums) {
