@@ -9,11 +9,17 @@ class Solution {
 
         int maxScore = currentScore;
 
+        int left = k - 1;
+        int right = n - 1;
+
         for (int i = 0; i < k; i++) {
-            currentScore -= cardPoints[k - 1 - i];
-            currentScore += cardPoints[n - 1 - i];
+            currentScore -= cardPoints[left];
+            currentScore += cardPoints[right];
 
             maxScore = Math.max(maxScore, currentScore);
+
+            left--;
+            right--;
         }
 
         return maxScore;
